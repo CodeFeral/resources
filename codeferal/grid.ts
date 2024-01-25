@@ -1,5 +1,3 @@
-// wip
-// TODO
 export class Grid {
   readonly columns: number;
   readonly rows: number;
@@ -12,6 +10,13 @@ export class Grid {
 
     this.data = [];
     this.reset();
+  }
+
+  reset(): void {
+    this.data = [];
+    for (let c = 0; c < this.columns; c++) {
+      this.data.push([]);
+    }
   }
 
   isValidPosition(x: number, y: number): boolean {
@@ -37,17 +42,10 @@ export class Grid {
     return this.data;
   }
 
-  reset(): void {
-    this.data = [];
-    for (let x = 0; x < this.columns; x++) {
-      this.data.push([]);
-    }
-  }
-
   toString(): string {
     let output = "";
-    for (let x = 0; x < this.columns; x++) {
-      for (let y = 0; y < this.rows; y++) {
+    for (let y = 0; y < this.rows; y++) {
+      for (let x = 0; x < this.columns; x++) {
         output += `[${this.data[x][y]}]`;
       }
       output += "\n";
