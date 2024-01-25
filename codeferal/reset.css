@@ -1,0 +1,93 @@
+/* CSS Reset */
+
+/* Box-sizing border-box for all elements for more intuitive sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensuring html and body can take full height of the viewport */
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
+/* Setting base line-height for better readability and accessibility */
+body {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  /* Prevent zooming on mobile devices */
+}
+
+/* Responsive images and embedded content */
+img,
+canvas,
+video,
+iframe,
+embed,
+object,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Reset link styles for more control over styling */
+a {
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+  /* Ensure transparent backgrounds on links */
+}
+
+/* Ensure form elements inherit font styles from their parent for consistency */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* Normalize table appearance */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  /* Ensure tables are not narrower than their container */
+}
+
+/* Textarea overflow handling to prevent horizontal scrolling */
+textarea {
+  overflow: auto;
+  /* Only add scrollbars when necessary */
+}
+
+/* Consistent display for details element */
+details {
+  display: block;
+}
+
+/* Prevent text overflows in all text containers */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  /* For IE11 and below */
+}
+
+/* Remove default list styles and ensure they are reset */
+ul,
+ol {
+  list-style: none;
+}
